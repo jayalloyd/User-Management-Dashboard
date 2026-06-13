@@ -17,7 +17,10 @@ export default function App() {
     user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     user.email.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
+  const handleDeleteUser=(idToDelete)=>{
+  const updatedUsersList= users.filter(user=>user.id !== idToDelete);
+  setUsers(updatedUsersList);
+  }
   return (
     <div>
      
@@ -27,7 +30,7 @@ export default function App() {
       />
       
       <div className="container mt-4">
-        <UserTable users={filteredUsers} />
+        <UserTable users={filteredUsers} onDelete={handleDeleteUser}/>
       </div>
     </div>
   );

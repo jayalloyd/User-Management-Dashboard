@@ -1,8 +1,13 @@
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
+import { useState } from 'react';
 
 // Accept users as a prop
-export default function UserTable({ users }) {
+export default function UserTable({ users,onDelete }) {
+
+  const handleDelete=(idToDelete)=>{
+    onDelete(idToDelete);
+  };
   return (
     <Table striped bordered hover responsive>
       <thead>
@@ -20,7 +25,8 @@ export default function UserTable({ users }) {
             <td>{user.name}</td>
             <td>{user.email}</td>
             <td>
-              <Button variant="danger" size="sm">
+        
+              <Button variant="danger" size="sm" onClick={() => handleDelete(user.id)}>
                 Delete
               </Button>
             </td>
