@@ -6,6 +6,7 @@ import { useState } from 'react';
 export default function UserTable({ users,onDelete }) {
 
   const handleDelete=(idToDelete)=>{
+    
     onDelete(idToDelete);
   };
   return (
