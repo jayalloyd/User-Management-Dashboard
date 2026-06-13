@@ -42,10 +42,10 @@ Follow these quick commands to spin up a local copy of this repository on your m
 
 Clone the repository:
 
-Bash
+```
 git clone [https://github.com/jayalloyd/User-Management-Dashboard.git](https://github.com/jayalloyd/User-Management-Dashboard.git)
 
-
+```
 cd User-Management-Dashboard
 
 Install dependency structures:
